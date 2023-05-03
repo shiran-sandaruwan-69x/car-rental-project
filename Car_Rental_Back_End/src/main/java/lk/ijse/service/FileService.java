@@ -1,0 +1,18 @@
+package lk.ijse.service;
+
+import org.springframework.web.multipart.MultipartFile;
+
+import java.nio.file.Path;
+import java.util.stream.Stream;
+
+public interface FileService {
+    void init();
+
+    void save(MultipartFile file);
+
+    void load(String filename,String rootPath);
+
+    void deleteAll();
+
+    Stream<Path> loadAll();
+}
